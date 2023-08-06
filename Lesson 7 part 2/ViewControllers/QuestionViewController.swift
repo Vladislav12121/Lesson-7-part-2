@@ -8,22 +8,27 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-
+    
+    @IBOutlet var rangedLabels: [UILabel]!
+    
+    @IBOutlet var rangedSlider: UISlider!
+    @IBOutlet var rangedStackView: UIStackView!
+    
+    @IBOutlet var multipleLabels: [UILabel]!
+    @IBOutlet var multipleStackView: UIStackView!
+    
+    @IBOutlet var singleButtons: [UIButton]!
+    @IBOutlet var singleStackView: UIStackView!
+    
+    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var questionProgressView: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+ 
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
