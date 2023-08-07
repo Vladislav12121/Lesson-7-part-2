@@ -212,7 +212,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="p5o-Ni-6Qe"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="jp8-17-qoG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGP-Uu-k5H">
@@ -222,7 +222,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="nhJ-Sd-X79"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="1gT-DF-HL3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKs-ZL-wZd">
@@ -232,7 +232,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="ikp-RH-Z2l"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="0Lc-3j-ire"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFc-HK-r7n">
@@ -242,7 +242,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="zgo-rD-dhy"/>
+                                            <action selector="singleAnswerButtonPressed:" destination="hHH-Zn-uE6" eventType="touchUpInside" id="oUm-aL-CpA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -295,6 +295,7 @@
                         <outletCollection property="multipleLabels" destination="eQY-jZ-wkt" collectionClass="NSMutableArray" id="ZGM-Ru-lRC"/>
                         <outletCollection property="rangedLabels" destination="J9G-4z-121" collectionClass="NSMutableArray" id="ghb-m3-eI0"/>
                         <outletCollection property="rangedLabels" destination="0dP-jo-olN" collectionClass="NSMutableArray" id="SL9-Lw-f5U"/>
+                        <outletCollection property="multipleSwitches" destination="VgV-IB-FEn" collectionClass="NSMutableArray" id="GiM-b7-7b8"/>
                         <segue destination="rAp-J4-5oU" kind="show" identifier="showResult" id="yCX-Wb-uaw"/>
                     </connections>
                 </viewController>
