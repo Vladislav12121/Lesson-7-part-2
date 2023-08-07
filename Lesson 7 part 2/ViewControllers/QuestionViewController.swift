@@ -10,7 +10,13 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     @IBOutlet var rangedLabels: [UILabel]!
-    @IBOutlet var rangedSlider: UISlider!
+    @IBOutlet var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.maximumValue = answerCount
+            rangedSlider.value = answerCount / 2
+        }
+    }
     @IBOutlet var rangedStackView: UIStackView!
     
     @IBOutlet var multipleSwitches: [UISwitch]!
@@ -48,10 +54,18 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func multipleAnswerButtonPressed() {
-//        for (multipleSwitch, answer) in (mu)
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answersChosen.append(answer)
+            }
+        }
+        nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
+        let index = lrintf(rangedSlider.value)
+        answersChosen.append(currentAnswers[index])
+        nextQuestion()
     }
     
 }
@@ -88,7 +102,7 @@ extension QuestionViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
         private func showSingleStackView(with answers: [Answer]) {
@@ -106,6 +120,14 @@ extension QuestionViewController {
             label.text = answer.title
         }
     }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden.toggle()
+        
+        rangedLabels.first?.text = answers.first?.title
+        rangedLabels.last?.text = answers.last?.title
+    }
+    
     private func nextQuestion() {
         questionIndex += 1
         

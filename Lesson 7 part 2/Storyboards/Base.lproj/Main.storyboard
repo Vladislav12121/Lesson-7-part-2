@@ -126,7 +126,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNw-mF-uIt">
                                         <rect key="frame" x="0.0" y="82.333333333333314" width="361" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
                                             <action selector="rangedAnswerButtonPressed" destination="hHH-Zn-uE6" eventType="touchUpInside" id="y7i-QN-LM4"/>
                                         </connections>
@@ -195,7 +195,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD9-co-QNB">
                                         <rect key="frame" x="0.0" y="156" width="361" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
                                             <action selector="multipleAnswerButtonPressed" destination="hHH-Zn-uE6" eventType="touchUpInside" id="yf5-Oa-29K"/>
                                         </connections>
@@ -296,6 +296,9 @@
                         <outletCollection property="rangedLabels" destination="J9G-4z-121" collectionClass="NSMutableArray" id="ghb-m3-eI0"/>
                         <outletCollection property="rangedLabels" destination="0dP-jo-olN" collectionClass="NSMutableArray" id="SL9-Lw-f5U"/>
                         <outletCollection property="multipleSwitches" destination="VgV-IB-FEn" collectionClass="NSMutableArray" id="GiM-b7-7b8"/>
+                        <outletCollection property="multipleSwitches" destination="dP8-sJ-voB" collectionClass="NSMutableArray" id="ob1-Es-psK"/>
+                        <outletCollection property="multipleSwitches" destination="ziZ-ej-dpU" collectionClass="NSMutableArray" id="oyZ-ok-MuU"/>
+                        <outletCollection property="multipleSwitches" destination="9rP-GT-OjK" collectionClass="NSMutableArray" id="gXA-w7-MRe"/>
                         <segue destination="rAp-J4-5oU" kind="show" identifier="showResult" id="yCX-Wb-uaw"/>
                     </connections>
                 </viewController>
