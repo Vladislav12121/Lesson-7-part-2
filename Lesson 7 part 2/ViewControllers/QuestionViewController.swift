@@ -36,21 +36,25 @@ class QuestionViewController: UIViewController {
         question[questionIndex].answers
     }
     
+    private let questions = Question.getQuestions()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
  
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.answers = answersChosen
+        
+    }
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
         answersChosen.append(currentAnswer)
         
         nextQuestion()
-        
-        
     }
     
     @IBAction func multipleAnswerButtonPressed() {
@@ -73,29 +77,22 @@ class QuestionViewController: UIViewController {
 //MARK: - Private Methods
 extension QuestionViewController {
     private func updateUI() {
-        // Hide everything
+        
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
         }
         
-        // Get current question
         let currentQuestion = question[questionIndex]
         
-        // Set current question for question label
         questionLabel.text = currentQuestion.title
         
-        // Calculate progress
         let totalProgress = Float(questionIndex) / Float(question.count)
-        
-        //Set progress for question progressView
+    
         questionProgressView.setProgress(totalProgress, animated: true)
         
-        // Set navigation title
         title = "Вопрос№ \(questionIndex + 1) из \(question.count)"
         
-    
         showCurrentAnswers(for: currentQuestion.responseType)
-            
     }
     
     private func showCurrentAnswers(for type: ResponseType) {

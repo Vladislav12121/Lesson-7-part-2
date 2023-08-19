@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson_7_part_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,9 +267,7 @@
                             <constraint firstItem="us1-qT-JmN" firstAttribute="centerY" secondItem="XdW-6m-66G" secondAttribute="centerY" id="oLj-qO-Wde"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Result" id="fmP-UY-VlA"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Вопрос №" leftItemsSupplementBackButton="YES" id="bqc-6J-LwD">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="ht5-4e-Fse">
                             <connections>
@@ -309,7 +307,7 @@
         <!--Результат-->
         <scene sceneID="6gk-RX-dZ1">
             <objects>
-                <viewController id="rAp-J4-5oU" customClass="AnswerViewController" customModule="Lesson_7_part_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rAp-J4-5oU" customClass="ResultViewController" customModule="Lesson_7_part_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhh-eK-6h6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,8 +339,18 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Результат" id="W3e-qz-IfM"/>
+                    <navigationItem key="navigationItem" title="Результат" id="W3e-qz-IfM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QFn-XU-IPm">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="rAp-J4-5oU" id="UfV-h5-LOb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="animalLabel" destination="Fzy-fA-xDz" id="RX3-gV-Erk"/>
+                        <outlet property="descriptionLabel" destination="IMb-61-KP9" id="sKi-FN-kF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vT-LS-kmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
